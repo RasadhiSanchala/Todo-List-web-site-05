@@ -1,6 +1,5 @@
 const todoList = [
     { name: 'Make Dinner', dueDate: '2022-05-03' },
-    { name: 'Wash Dishes', dueDate: '2022-05-08' }
 ];
 
 rendertodoList();
