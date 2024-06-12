@@ -1,65 +1,111 @@
 
+/* General body styling */
 body {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center; 
+    align-items: center;
     background-color: #eceaf2;
-    }
-    
-    
-    .title{
-    font-size: 30px;
-    color: rgb(22, 22, 23);
-    text-shadow: #aba7bc;
-    }
-    
-    .box-style{
-        box-shadow: 10px 10px 10px #aba7bc;
-        background-color: rgb(212, 203, 222) ;
-        font-family: Georgia, serif; /* Added a fallback font */
-        padding: 25px;
-        color: rgb(26, 24, 24);
-        display: inline-block; /* Added to make the box fit content */
-    }
-    
-    .todo-grid,
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+/* Title styling */
+.title {
+    font-size: 2rem;
+    color: #161617;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Responsive image styling */
+.responsive-img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Box styling */
+.box-style {
+    background-color: #d4cbde;
+    box-shadow: 10px 10px 10px #aba7bc;
+    padding: 25px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+/* Grid layout for todo input */
+.todo-input-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%;
+}
+
+@media (min-width: 600px) {
     .todo-input-grid {
-        display: grid;
-        grid-template-columns: 200px 150px 100px;
-        column-gap: 10px;
-        row-gap: 10px;
-        align-items: center;
+        grid-template-columns: 2fr 1fr auto;
     }
-    
-    .todo-input-grid {
-        margin-bottom: 10px;
-        align-items: stretch;
-    }
-    
-    .name-input,
-    .due-date-input {
-        font-size: 15px;
-        padding: 6px;
-    }
-    
-    .add-todo-button {
-        background-color: green;
-        color: white;
-        border: none;
-        font-size: 15px;
-        cursor: pointer;
-    }
-    
-    .delete-todo-button {
-        background-color: rgb(192, 63, 63);
-        color: white;
-        border: none;
-        font-size: 15px;
-        cursor: pointer;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        width: 100px;
-    }
-    
+}
+
+/* Input and button styling */
+.name-input,
+.due-date-input {
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.add-todo-button {
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.add-todo-button:hover {
+    background-color: darkgreen;
+}
+
+/* Todo grid styling */
+.todo-grid {
+    margin-top: 20px;
+    display: grid;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Button styling for delete button */
+.delete-todo-button {
+    background-color: #c03f3f;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.delete-todo-button:hover {
+    background-color: darkred;
+}
+
+/* Ensuring text shadow doesn't affect readability */
+.title {
+    text-shadow: 1px 1px #aba7bc;
+}
