@@ -6,10 +6,6 @@ body {
     justify-content: center;
     align-items: center; 
     background-color: #eceaf2;
-    margin: 0; /* Reset margin */
-    padding: 20px; /* Padding to simulate margin */
-    box-sizing: border-box;
-    
     }
     
     
